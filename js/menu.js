@@ -146,8 +146,6 @@ function volverAlInicio() {
     cambiarVista('inicio', inicioLink);
 }
 
-// GENERAR TARJETAS DEL PANEL DE CONTROL
-
 function renderizarTarjetas() {
     const contenedor = document.getElementById('tarjetas-container');
     if (!contenedor) return;
