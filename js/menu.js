@@ -8,22 +8,22 @@ const menuItems = [
     { id: 'inicio', icon: '🏠', label: 'Inicio', tipo: 'interno' },
 
     // --- Actividades Web (cargan index.html en el iframe) ---
-    { id: 'act1',  icon: '📄', label: 'Act 1: Opinión sobre el material de estudio', tipo: 'pdf', url: 'actividades/actividad 1/documento.pdf' },
-    { id: 'act2',  icon: '🌐', label: 'Act 2: Mi Página Web',     tipo: 'web',   url: 'actividades/actividad 2/index.html' },
-    { id: 'act3',  icon: '🏷️', label: 'Act 3: 102 Etiquetas',     tipo: 'web',   url: 'actividades/actividad 3/index.html' },
-    { id: 'act4',  icon: '🏦', label: 'Act 4: Web Banco',         tipo: 'web',   url: 'actividades/actividad 4/index.html' },
-    { id: 'act5',  icon: '📋', label: 'Act 5: Menú Dinámico',     tipo: 'web',   url: 'actividades/actividad 5/public/index.html' },
+    { id: 'act1',  icon: '📄', label: 'Act 1: Opinión sobre el material de estudio', tipo: 'pdf', url: 'actividades/Actividad 1/documento.pdf' },
+    { id: 'act2',  icon: '🌐', label: 'Act 2: Mi Página Web',     tipo: 'web',   url: 'actividades/Actividad 2/index.html' },
+    { id: 'act3',  icon: '🏷️', label: 'Act 3: 102 Etiquetas',     tipo: 'web',   url: 'actividades/Actividad 3/index.html' },
+    { id: 'act4',  icon: '🏦', label: 'Act 4: Web Banco',         tipo: 'web',   url: 'actividades/Actividad 4/index.html' },
+    { id: 'act5',  icon: '📋', label: 'Act 5: Menú Dinámico',     tipo: 'web',   url: 'actividades/Actividad 5/public/index.html' },
     { id: 'act6',  icon: '🤖', label: 'Act 6: Pruebas Automatizadas', tipo: 'md', url: 'actividades/Actividad 6/Pruebas-Automatizadas-Ecoturismo/README.md' },
-    { id: 'act7',  icon: '✅', label: 'Act 7: Pruebas BDD (Gherkin)', tipo: 'md', url: 'actividades/actividad 7/pruebas-bdd-foodexpress/README.md' },
-    { id: 'act8',  icon: '⚡', label: 'Act 8: Performance (k6)',      tipo: 'md', url: 'actividades/actividad 8/README.md' },
-    { id: 'act9',  icon: '📄', label: 'Act 9: Resumen Área 1',        tipo: 'pdf', url: 'actividades/actividad 9/documento.pdf' },
-    { id: 'act10', icon: '📄', label: 'Act 10: Resumen Tarea 2',      tipo: 'pdf', url: 'actividades/actividad 10/documento.pdf' },
-    { id: 'act11', icon: '📄', label: 'Act 11: Resumen Tarea 3',      tipo: 'pdf', url: 'actividades/actividad 11/documento.pdf' },
-    { id: 'act12', icon: '📝', label: 'Act 12: Formulario con BD', tipo: 'web',  url: 'actividades/actividad 12/index.html' },
-    { id: 'act13', icon: '📄', label: 'Act 13: MVC (Teoría)',         tipo: 'pdf', url: 'actividades/actividad 13/documento.pdf' },
-    { id: 'act14', icon: '🆔', label: 'Act 14: Validador Cédula', tipo: 'web',   url: 'actividades/actividad 14/index.html' },
-    { id: 'act15', icon: '📄', label: 'Act 15: Spring Framework',     tipo: 'pdf', url: 'actividades/actividad 15/documento.pdf' },
-    { id: 'act16', icon: '🤖', label: 'Act 16: Chatbot IA',     tipo: 'web', url: 'actividades/actividad 16/index.html' }
+    { id: 'act7',  icon: '✅', label: 'Act 7: Pruebas BDD (Gherkin)', tipo: 'md', url: 'actividades/Actividad 7/pruebas-bdd-foodexpress/README.md' },
+    { id: 'act8',  icon: '⚡', label: 'Act 8: Performance (k6)',      tipo: 'md', url: 'actividades/Actividad 8/README.md' },
+    { id: 'act9',  icon: '📄', label: 'Act 9: Resumen Área 1',        tipo: 'pdf', url: 'actividades/Actividad 9/documento.pdf' },
+    { id: 'act10', icon: '📄', label: 'Act 10: Resumen Tarea 2',      tipo: 'pdf', url: 'actividades/Actividad 10/documento.pdf' },
+    { id: 'act11', icon: '📄', label: 'Act 11: Resumen Tarea 3',      tipo: 'pdf', url: 'actividades/Actividad 11/documento.pdf' },
+    { id: 'act12', icon: '📝', label: 'Act 12: Formulario con BD', tipo: 'web',  url: 'actividades/Actividad 12/index.html' },
+    { id: 'act13', icon: '📄', label: 'Act 13: MVC (Teoría)',         tipo: 'pdf', url: 'actividades/Actividad 13/documento.pdf' },
+    { id: 'act14', icon: '🆔', label: 'Act 14: Validador Cédula', tipo: 'web',   url: 'actividades/Actividad 14/index.html' },
+    { id: 'act15', icon: '📄', label: 'Act 15: Spring Framework',     tipo: 'pdf', url: 'actividades/Actividad 15/documento.pdf' },
+    { id: 'act16', icon: '🤖', label: 'Act 16: Chatbot IA',     tipo: 'web', url: 'actividades/Actividad 16/index.html' }
 
 ];
 
