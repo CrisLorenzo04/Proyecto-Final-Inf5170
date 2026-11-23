@@ -1,0 +1,17 @@
+{
+  "name": "aula-magna-ia",
+  "version": "1.0.0",
+  "description": "Chatbot web inteligente para consultar el Estatuto Organico de la UASD.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chatbot",
+    "uasd",
+    "inteligencia-artificial",
+    "estatuto"
+  ],
+  "author": "Cristian Junior Lorenzo Abud",
+  "license": "MIT"
+}
