@@ -1,24 +1,37 @@
-/* Estilos generales */
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #f4f6f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .hidden {
     display: none !important;
 }
 
-/* ==================== LOGIN ==================== */
+/* ============================================
+   LOGIN
+   ============================================ */
 .login-container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
 }
 
 .login-card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -31,20 +44,49 @@ body {
     padding: 20px;
 }
 
-/* ==================== SIDEBAR (Menú) ==================== */
+.login-card .card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* ============================================
+   LAYOUT PRINCIPAL (Sidebar + Contenido)
+   ============================================ */
+#main-system .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+/* ============================================
+   SIDEBAR (Menú lateral)
+   ============================================ */
 .sidebar {
     min-height: 100vh;
     background: #212529;
     color: white;
-    padding-top: 20px;
+    padding: 20px 15px;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.sidebar h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 .sidebar .nav-link {
     color: #adb5bd;
     margin-bottom: 5px;
-    padding: 10px 15px;
+    padding: 10px 12px;
     border-radius: 5px;
     transition: all 0.3s;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .sidebar .nav-link:hover {
@@ -57,19 +99,32 @@ body {
     background: #0d6efd;
 }
 
-/* ==================== CONTENIDO ==================== */
+/* ============================================
+   ÁREA DE CONTENIDO
+   ============================================ */
 .content-area {
-    padding: 30px;
+    padding: 20px;
+    flex: 1;
+    min-width: 0; /* Evita que el contenido desborde */
 }
 
+.content-area h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   TARJETAS (Cards)
+   ============================================ */
 .card {
     border: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .info-card {
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    height: 100%;
 }
 
 .info-card:hover {
@@ -77,7 +132,202 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ==================== ALERTAS ==================== */
+/* ============================================
+   IFRAME (Para actividades externas)
+   ============================================ */
+#iframe-actividad {
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* ============================================
+   ALERTAS
+   ============================================ */
 .alert {
     border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+/* ============================================
+   📱 RESPONSIVE - TABLETS (hasta 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .sidebar {
+        min-height: auto;
+        max-height: none;
+        position: relative;
+        padding: 15px;
+    }
+    
+    .sidebar h5 {
+        font-size: 1rem;
+    }
+    
+    .content-area {
+        padding: 15px;
+    }
+}
+
+/* ============================================
+   📱 RESPONSIVE - CELULARES (hasta 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Layout en columna: sidebar arriba, contenido abajo */
+    #main-system .row {
+        flex-direction: column;
+    }
+    
+    /* Sidebar se convierte en barra horizontal */
+    .sidebar {
+        min-height: auto;
+        max-height: 300px;
+        padding: 10px;
+        border-bottom: 3px solid #0d6efd;
+    }
+    
+    .sidebar h5 {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    
+    .sidebar p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    /* Menú en grid de 2 columnas en móvil */
+    #dynamic-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+    
+    .sidebar .nav-link {
+        font-size: 0.75rem;
+        padding: 8px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* Botón de cerrar sesión ocupa todo el ancho */
+    .sidebar .btn-outline-danger {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Contenido con menos padding */
+    .content-area {
+        padding: 10px;
+    }
+    
+    .content-area h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* Tarjetas en 1 columna */
+    #tarjetas-container .col-md-4,
+    #tarjetas-container .col-lg-3 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    
+    /* Iframe más pequeño en móvil */
+    #iframe-actividad {
+        height: 60vh;
+        min-height: 300px;
+    }
+    
+    /* Login card ocupa casi todo el ancho */
+    .login-card {
+        max-width: 100%;
+    }
+    
+    /* Botones en fila en formularios */
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    /* Ajustar el header del título de actividad */
+    #view-actividad-externa .d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #view-actividad-externa .d-flex .btn {
+        width: auto;
+    }
+}
+
+/* ============================================
+   📱 RESPONSIVE - CELULARES PEQUEÑOS (hasta 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .sidebar h5 {
+        font-size: 0.85rem;
+    }
+    
+    .sidebar .nav-link {
+        font-size: 0.7rem;
+        padding: 6px 4px;
+    }
+    
+    #dynamic-menu {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .content-area h2 {
+        font-size: 1rem;
+    }
+    
+    .info-card h6 {
+        font-size: 0.85rem;
+    }
+    
+    .info-card p {
+        font-size: 0.7rem;
+    }
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+/* Evitar que imágenes desborden */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejorar la experiencia táctil en móviles */
+@media (hover: none) {
+    .info-card:hover {
+        transform: none;
+    }
+    
+    .info-card:active {
+        transform: scale(0.98);
+    }
 }
